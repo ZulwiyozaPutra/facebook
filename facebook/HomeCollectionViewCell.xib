@@ -102,7 +102,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-Tr-7Nq" userLabel="Footer Stack View">
-                                <rect key="frame" x="16" y="556" width="379" height="32"/>
+                                <rect key="frame" x="16" y="564.5" width="379" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-ko-dx9">
                                         <rect key="frame" x="0.0" y="0.0" width="126.5" height="32"/>
@@ -124,19 +124,29 @@
                                     <constraint firstAttribute="height" constant="32" id="2Wz-2t-Mc1"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kik-l9-H4E">
+                                <rect key="frame" x="16" y="556" width="395" height="0.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="ncR-mz-uBP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CNC-sB-EBG" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" constant="16" id="2gT-Ae-elZ"/>
+                            <constraint firstItem="VxZ-Tr-7Nq" firstAttribute="top" secondItem="kik-l9-H4E" secondAttribute="bottom" constant="8" id="E5i-lx-gR0"/>
+                            <constraint firstItem="kik-l9-H4E" firstAttribute="top" secondItem="CNC-sB-EBG" secondAttribute="bottom" constant="8" id="Jyj-fN-A1o"/>
                             <constraint firstAttribute="trailing" secondItem="zKZ-IN-xtP" secondAttribute="trailing" id="LRi-tz-aic"/>
                             <constraint firstItem="zKZ-IN-xtP" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" id="Sti-Nm-7yD"/>
                             <constraint firstItem="aEm-Vp-khu" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" constant="16" id="T4g-nA-zMO"/>
-                            <constraint firstItem="VxZ-Tr-7Nq" firstAttribute="top" secondItem="CNC-sB-EBG" secondAttribute="bottom" constant="8" id="VrQ-MI-bIS"/>
+                            <constraint firstItem="kik-l9-H4E" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" constant="16" id="e8G-ZP-THn"/>
                             <constraint firstItem="zKZ-IN-xtP" firstAttribute="top" secondItem="aEm-Vp-khu" secondAttribute="bottom" constant="8" id="eud-1w-k9I"/>
                             <constraint firstItem="CNC-sB-EBG" firstAttribute="top" secondItem="zKZ-IN-xtP" secondAttribute="bottom" constant="8" id="fiW-6f-17i"/>
                             <constraint firstItem="VxZ-Tr-7Nq" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" constant="16" id="k5b-aX-2Uq"/>
                             <constraint firstAttribute="trailing" secondItem="VxZ-Tr-7Nq" secondAttribute="trailing" constant="16" id="kS4-r7-VmQ"/>
                             <constraint firstItem="aEm-Vp-khu" firstAttribute="top" secondItem="czx-kZ-cKk" secondAttribute="top" constant="16" id="x0F-O2-AIL"/>
+                            <constraint firstAttribute="trailing" secondItem="kik-l9-H4E" secondAttribute="trailing" id="yau-H0-VLB"/>
                         </constraints>
                     </view>
                 </subviews>

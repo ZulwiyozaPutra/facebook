@@ -38,9 +38,10 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         let imageHeight = view.frame.width / 4 * 3
         let content: CGFloat = 143.5 + imageHeight
         let counter: CGFloat = 16
+        let divider: CGFloat = 0.5
         let footer: CGFloat = 32
-        let spacesBetween: CGFloat = 32
-        let cellHeight = topAndBottomSpace + header + content + counter + footer + spacesBetween
+        let spacesBetween: CGFloat = 40
+        let cellHeight = topAndBottomSpace + header + content + counter + divider + footer + spacesBetween
         
         return CGSize(width: view.frame.width, height: cellHeight)
     }
