@@ -82,7 +82,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNC-sB-EBG" userLabel="Counter Stack View">
-                                <rect key="frame" x="16" y="532" width="181" height="16"/>
+                                <rect key="frame" x="214" y="532" width="181" height="16"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.2K Votes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-iq-5uG">
                                         <rect key="frame" x="0.0" y="0.0" width="63.5" height="16"/>
@@ -101,23 +101,29 @@
                                     <constraint firstAttribute="height" constant="16" id="z9x-Yw-ATS"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-Tr-7Nq" userLabel="Footer Stack View">
-                                <rect key="frame" x="16" y="564.5" width="379" height="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-Tr-7Nq" userLabel="Footer Stack View">
+                                <rect key="frame" x="16" y="564.5" width="234" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-ko-dx9">
-                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <state key="normal" title="Upvote"/>
+                                        <state key="normal" title="Upvote">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yya-sk-4KP">
-                                        <rect key="frame" x="126.5" y="0.0" width="126" height="32"/>
+                                        <rect key="frame" x="70" y="0.0" width="75" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <state key="normal" title="Downvote"/>
+                                        <state key="normal" title="Downvote">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LT0-g1-HGl">
-                                        <rect key="frame" x="252.5" y="0.0" width="126.5" height="32"/>
+                                        <rect key="frame" x="161" y="0.0" width="73" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                        <state key="normal" title="Comment"/>
+                                        <state key="normal" title="Comment">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -134,7 +140,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CNC-sB-EBG" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" constant="16" id="2gT-Ae-elZ"/>
+                            <constraint firstAttribute="trailing" secondItem="CNC-sB-EBG" secondAttribute="trailing" constant="16" id="BlL-az-bRi"/>
                             <constraint firstItem="VxZ-Tr-7Nq" firstAttribute="top" secondItem="kik-l9-H4E" secondAttribute="bottom" constant="8" id="E5i-lx-gR0"/>
                             <constraint firstItem="kik-l9-H4E" firstAttribute="top" secondItem="CNC-sB-EBG" secondAttribute="bottom" constant="8" id="Jyj-fN-A1o"/>
                             <constraint firstAttribute="trailing" secondItem="zKZ-IN-xtP" secondAttribute="trailing" id="LRi-tz-aic"/>
@@ -144,7 +150,6 @@
                             <constraint firstItem="zKZ-IN-xtP" firstAttribute="top" secondItem="aEm-Vp-khu" secondAttribute="bottom" constant="8" id="eud-1w-k9I"/>
                             <constraint firstItem="CNC-sB-EBG" firstAttribute="top" secondItem="zKZ-IN-xtP" secondAttribute="bottom" constant="8" id="fiW-6f-17i"/>
                             <constraint firstItem="VxZ-Tr-7Nq" firstAttribute="leading" secondItem="czx-kZ-cKk" secondAttribute="leading" constant="16" id="k5b-aX-2Uq"/>
-                            <constraint firstAttribute="trailing" secondItem="VxZ-Tr-7Nq" secondAttribute="trailing" constant="16" id="kS4-r7-VmQ"/>
                             <constraint firstItem="aEm-Vp-khu" firstAttribute="top" secondItem="czx-kZ-cKk" secondAttribute="top" constant="16" id="x0F-O2-AIL"/>
                             <constraint firstAttribute="trailing" secondItem="kik-l9-H4E" secondAttribute="trailing" id="yau-H0-VLB"/>
                         </constraints>
