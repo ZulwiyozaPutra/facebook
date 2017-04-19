@@ -19,11 +19,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         configureUIView()
         setupPosts()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
@@ -87,6 +82,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         thirdUser.fullName = "Elon Musk"
         thirdUser.identifier = "1G7759S31NFH"
         thirdPost.user = thirdUser
+        thirdPost.imageURL = "https://www.technobuffalo.com/wp-content/uploads/2015/05/elonmusk.jpg"
         
         thirdPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pellentesque vestibulum turpis porttitor hendrerit. Aliquam vitae nisi placerat."
         posts.append(thirdPost)
