@@ -10,6 +10,7 @@ import UIKit
 
 class User: NSObject {
     var identifier: String!
-    var username: String!
+    var userName: String!
+    var fullName: String!
     var userProfileImage: UIImage?
 }
