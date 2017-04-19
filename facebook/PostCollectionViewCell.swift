@@ -8,8 +8,6 @@
 
 import UIKit
 
-var imageCache = NSCache<AnyObject, AnyObject>()
-
 class PostCollectionViewCell: UICollectionViewCell {
     
     var post: Post? {
@@ -23,38 +21,34 @@ class PostCollectionViewCell: UICollectionViewCell {
             postContentLabel.text = post.content
             
             if let imageStringURL = post.imageURL {
-                if let image = imageCache.object(forKey: imageStringURL as AnyObject) as? UIImage {
-                    postContentImageView.image = image
-                } else {
-                    guard let imageURL = URL(string: imageStringURL) else {
-                        print("Can't convert string to url")
+                
+                guard let imageURL = URL(string: imageStringURL) else {
+                    print("Can't convert string to url")
+                    return
+                }
+                
+                URLSession.shared.dataTask(with: imageURL, completionHandler: { (data, response, error) in
+                    guard (error == nil) else {
+                        print("There was an error returned")
                         return
                     }
                     
-                    URLSession.shared.dataTask(with: imageURL, completionHandler: { (data, response, error) in
-                        guard (error == nil) else {
-                            print("There was an error returned")
-                            return
-                        }
-                        
-                        guard let imageData = data else {
-                            print("There was no data returned")
-                            return
-                        }
-                        
-                        guard let image = UIImage(data: imageData) else {
-                            print("There was no image data in returned data")
-                            return
-                        }
-                        
-                        imageCache.setObject(image, forKey: imageStringURL as AnyObject)
-                        
-                        DispatchQueue.main.async {
-                            self.postContentImageView.image = image
-                        }
-                        
-                    }).resume()
-                }
+                    guard let imageData = data else {
+                        print("There was no data returned")
+                        return
+                    }
+                    
+                    guard let image = UIImage(data: imageData) else {
+                        print("There was no image data in returned data")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.postContentImageView.image = image
+                    }
+                    
+                }).resume()
+                
             }
         }
     }

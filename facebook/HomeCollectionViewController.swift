@@ -16,6 +16,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        configureMaximumURLCacheSize()
         configureUIView()
         setupPosts()
     }
@@ -124,6 +125,12 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         
         // Set backgorund color
         collectionView.backgroundColor = UIColor(white: 0.95, alpha: 1.00)
+    }
+    
+    func configureMaximumURLCacheSize() -> Void {
+        let sizeOf500MB = 500 * 1024 * 1024
+        let cache = URLCache(memoryCapacity: sizeOf500MB, diskCapacity: sizeOf500MB, diskPath: "HomeCollectionViewCache")
+        URLCache.shared = cache
     }
 
 }
