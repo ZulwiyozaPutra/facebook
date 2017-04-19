@@ -165,6 +165,7 @@
             </constraints>
             <size key="customSize" width="411" height="605"/>
             <connections>
+                <outlet property="postContentImageView" destination="URo-2K-Lbu" id="nhG-7h-dMe"/>
                 <outlet property="postContentLabel" destination="qrC-Ov-DRY" id="4vK-2J-yaG"/>
                 <outlet property="userFullNameLabel" destination="C07-E3-02h" id="YmC-NH-p3W"/>
             </connections>

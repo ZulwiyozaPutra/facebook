@@ -67,6 +67,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         firstUser.fullName = "Steve Jobs"
         firstUser.identifier = "1G4J59S31NFH"
         firstPost.user = firstUser
+        firstPost.imageURL = "https://marco.org/media/2011/10/steve-jobs-dies.png"
 
         firstPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in nisl venenatis, sagittis dolor sed, accumsan risus. Donec eu dapibus diam. In molestie."
         posts.append(firstPost)
@@ -76,6 +77,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         secondUser.fullName = "Bill Gates"
         secondUser.identifier = "1G4759S31NFH"
         secondPost.user = secondUser
+        secondPost.imageURL = "https://www.fhi.ox.ac.uk/wp-content/uploads/2236.jpg"
         
         secondPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae massa quam. Nam sit amet enim et lorem lobortis ultrices consequat a ipsum. Praesent dolor felis, laoreet."
         posts.append(secondPost)
@@ -94,6 +96,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         fourthUser.fullName = "Mark Zuckerberg"
         fourthUser.identifier = "1G7759S41NFH"
         fourthPost.user = fourthUser
+        fourthPost.imageURL = "https://cnet2.cbsistatic.com/img/P9i6pR9AovgFRjdtVVRCREzVq-Y=/1600x900/2016/04/12/8895f254-fae9-4191-a5c7-25e8bac26258/f8-facebook-mark-zuckerberg-product-0208.jpg"
         
         fourthPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie est a aliquam consequat. Suspendisse potenti. Donec nec orci sapien. Praesent congue convallis quam in bibendum. Ut pretium rutrum erat. Phasellus augue."
         posts.append(fourthPost)
@@ -103,6 +106,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         fifthUser.fullName = "Jack Dorsey"
         fifthUser.identifier = "1G7759S41NFJ"
         fifthPost.user = fifthUser
+        fifthPost.imageURL = "https://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/Jack-Dorsey.jpg"
         
         fifthPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu semper ex. Donec ultricies neque eu sem aliquam iaculis. Nullam ut turpis bibendum, aliquet ante a, accumsan lorem. Vestibulum ultricies quis purus at elementum. Aliquam ut tincidunt turpis. Vivamus tempor aliquet venenatis. Etiam ut varius dui, nec cursus diam. Maecenas blandit nisi eget fringilla consectetur. Nam finibus est efficitur, lobortis sem sit amet, pharetra."
         posts.append(fifthPost)
