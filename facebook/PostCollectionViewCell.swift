@@ -21,6 +21,7 @@ class PostCollectionViewCell: UICollectionViewCell {
             postContentLabel.text = post.content
             
             if let imageStringURL = post.imageURL {
+                
                 guard let imageURL = URL(string: imageStringURL) else {
                     print("Can't convert string to url")
                     return
@@ -37,16 +38,18 @@ class PostCollectionViewCell: UICollectionViewCell {
                         return
                     }
                     
-                    let image = UIImage(data: imageData)
+                    guard let image = UIImage(data: imageData) else {
+                        print("There was no image data in returned data")
+                        return
+                    }
                     
                     DispatchQueue.main.async {
                         self.postContentImageView.image = image
                     }
                     
                 }).resume()
+                
             }
-            
-            
         }
     }
 

@@ -16,13 +16,9 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        configureMaximumURLCacheSize()
         configureUIView()
         setupPosts()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,6 +83,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         thirdUser.fullName = "Elon Musk"
         thirdUser.identifier = "1G7759S31NFH"
         thirdPost.user = thirdUser
+        thirdPost.imageURL = "https://www.technobuffalo.com/wp-content/uploads/2015/05/elonmusk.jpg"
         
         thirdPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pellentesque vestibulum turpis porttitor hendrerit. Aliquam vitae nisi placerat."
         posts.append(thirdPost)
@@ -128,6 +125,12 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         
         // Set backgorund color
         collectionView.backgroundColor = UIColor(white: 0.95, alpha: 1.00)
+    }
+    
+    func configureMaximumURLCacheSize() -> Void {
+        let sizeOf500MB = 500 * 1024 * 1024
+        let cache = URLCache(memoryCapacity: sizeOf500MB, diskCapacity: sizeOf500MB, diskPath: "HomeCollectionViewCache")
+        URLCache.shared = cache
     }
 
 }
