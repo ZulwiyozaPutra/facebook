@@ -9,6 +9,7 @@
 import UIKit
 
 let cellIdentifier = "Cell"
+let posts = [Post]()
 
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -24,7 +25,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,6 +45,21 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         let cellHeight = topAndBottomSpace + header + content + counter + divider + footer + spacesBetween
         
         return CGSize(width: view.frame.width, height: cellHeight)
+    }
+    
+    func setupPosts() -> Void {
+        let firstPost = Post()
+        firstPost.user.username = "Steve"
+        firstPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in nisl venenatis, sagittis dolor sed, accumsan risus. Donec eu dapibus diam. In molestie."
+        
+        let secondPost = Post()
+        secondPost.user.username = "Bill"
+        secondPost.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae massa quam. Nam sit amet enim et lorem lobortis ultrices consequat a ipsum. Praesent dolor felis, laoreet."
+        
+        let thirdPost = Post()
+        
+        
+        
     }
     
     func configureUIView() -> Void {
