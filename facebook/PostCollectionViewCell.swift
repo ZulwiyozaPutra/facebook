@@ -47,7 +47,7 @@ class PostCollectionViewCell: UICollectionViewCell {
                         self.postContentImageView.image = image
                     }
                     
-                }).resume()
+                }).resume()t
             }
         }
     }
