@@ -48,7 +48,6 @@ class PostCollectionViewCell: UICollectionViewCell {
                     }
                     
                 }).resume()
-                
             }
         }
     }
