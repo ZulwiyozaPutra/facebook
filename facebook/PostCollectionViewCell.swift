@@ -9,7 +9,6 @@
 import UIKit
 
 class PostCollectionViewCell: UICollectionViewCell {
-    
     var post: Post? {
         didSet {
             guard let post = post else {
