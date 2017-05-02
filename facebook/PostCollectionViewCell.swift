@@ -62,5 +62,4 @@ class PostCollectionViewCell: UICollectionViewCell {
         // Initialization code
         backgroundColor = UIColor.white
     }
-
 }
